@@ -1,0 +1,61 @@
+.time-controls-stat {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #2196F3; /* Bright blue */
+    font-family: 'Poppins', 'Arial', sans-serif; /* Clean and modern font */
+}
+
+.time-controls-table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    background: #E0F7FA; /* Light teal background */
+    border-radius: 10px;
+    overflow: hidden; /* Smooth border radius */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.time-controls-table th,
+.time-controls-table td {
+    padding: 15px 20px;
+    border: 1px solid #B2EBF2; /* Soft teal border */
+    text-align: center;
+}
+
+.time-controls-table th {
+    background-color: #00ACC1; /* Vibrant teal for headers */
+    font-weight: bold;
+    color: #fff; /* White text for contrast */
+    text-transform: uppercase;
+}
+
+.time-controls-table tbody tr:nth-child(even) {
+    background-color: #B3E5FC; /* Light blue for alternate rows */
+}
+
+.time-controls-table tbody tr:hover {
+    background-color: #80DEEA; /* Muted teal hover effect */
+    cursor: pointer;
+}
+
+.time-controls-table td {
+    color: #424242; /* Neutral text color */
+}
+
+/* Animation for table rows */
+.time-controls-table tbody tr {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.custom-rating {
+    color: #0077b6 !important;
+    font-size: 1.5em;
+    font-weight: bold;
+  }

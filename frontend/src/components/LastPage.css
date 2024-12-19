@@ -1,0 +1,32 @@
+.last-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f0f8ff; /* Light background */
+  }
+  
+  .centered-text {
+    font-size: 3em;
+    margin: 0.5em 0;
+    font-weight: bold;
+  }
+  
+  .confetti-button {
+    margin-top: 2em;
+    padding: 1em 2em;
+    font-size: 1.5em;
+    color: white;
+    background-color: #0077b6;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .confetti-button:hover {
+    background-color: #005f87;
+  }
+  
