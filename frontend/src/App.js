@@ -26,11 +26,12 @@ const App = () => {
     setUsername(e.target.value);
   };
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
   // Fetch data from backend
   const fetchData = async () => {
     try {
       setIsFetching(true);
-      const response = await axios.post('http://localhost:5001/api/chess/fetch', { username });
+      const response = await axios.post(`${backendUrl}/api/chess/fetch`, { username });
       setError('');
       setData(response.data);
       setIsFetching(false);
