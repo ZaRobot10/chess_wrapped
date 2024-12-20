@@ -90,8 +90,11 @@ router.post('/fetch', async (req, res) => {
     const timeModes = new Map(); // To count occurrences of each time mode
     games.forEach((game) => {
       const timeSpent = parseInt(game.time_control, 10); // Convert to integer
-        totalTime += timeSpent;
 
+      if (!isNaN(timeSpent)) {
+        totalTime += timeSpent;
+      }
+      
         // Track opponents
       const players = [game.white.username, game.black.username];
       players.forEach((player) => {
@@ -163,7 +166,7 @@ router.post('/fetch', async (req, res) => {
         timeModes.set(timeControl, 1);
       }
     });
-
+    
     // console.log('First Ratings:', firstRatings);
     // console.log('Current Ratings:', currRatings);
    
