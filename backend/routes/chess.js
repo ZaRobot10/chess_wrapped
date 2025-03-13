@@ -68,18 +68,20 @@ router.post('/fetch', async (req, res) => {
 
     // console.log('Stats:', stats);
     // console.log('Games:', games.length);
-
+    console.log(stats);
     const currRatings = [
-      stats.chess_daily.last.rating,
-      stats.chess_rapid.last.rating,
-      stats.chess_bullet.last.rating,
-      stats.chess_blitz.last.rating
+      stats.chess_daily && stats.chess_daily.last && stats.chess_daily.last.rating ? stats.chess_daily.last.rating : "?",
+      stats.chess_rapid && stats.chess_rapid.last && stats.chess_rapid.last.rating ? stats.chess_rapid.last.rating : "?",
+      stats.chess_bullet && stats.chess_bullet.last && stats.chess_bullet.last.rating ? stats.chess_bullet.last.rating : "?",
+      stats.chess_blitz && stats.chess_blitz.last && stats.chess_blitz.last.rating ? stats.chess_blitz.last.rating : "?"
     ];
 
-    const firstRatings = [stats.chess_daily.last.rating,
-      stats.chess_rapid.last.rating,
-      stats.chess_bullet.last.rating,
-      stats.chess_blitz.last.rating];
+    const firstRatings = [
+      stats.chess_daily && stats.chess_daily.last && stats.chess_daily.last.rating ? stats.chess_daily.last.rating : "?",
+      stats.chess_rapid && stats.chess_rapid.last && stats.chess_rapid.last.rating ? stats.chess_rapid.last.rating : "?",
+      stats.chess_bullet && stats.chess_bullet.last && stats.chess_bullet.last.rating ? stats.chess_bullet.last.rating : "?",
+      stats.chess_blitz && stats.chess_blitz.last && stats.chess_blitz.last.rating ? stats.chess_blitz.last.rating : "?"
+    ];
 
       // create a set called found
       const found = new Set();
